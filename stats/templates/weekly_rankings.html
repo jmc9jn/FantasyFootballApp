@@ -1,0 +1,59 @@
+{% extends "base_rankings.html" %}
+{% load dict_extras %}
+
+{% block content %}
+    <h2>Weekly Rankings</h2>
+
+    <label for="position">Position:</label>
+    <select id="position" onchange="updateFilterWeeklyRankings()">
+        <option value="">Select Position</option>
+        {% for pos in all_positions %}
+            <option value="{{ pos }}" {% if pos == selected_position %}selected{% endif %}>{{ pos }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="week">Week:</label>
+    <select id="week" onchange="updateFilterWeeklyRankings()">
+        {% for week in weeks_list %}
+            <option value="{{ week }}" {% if week == selected_week %}selected{% endif %}>{{ week }}</option>
+        {% endfor %}
+    </select>
+
+    {% if records %}
+        <h3> {{ selected_position }} Ranking for Week {{ selected_week }}</h3>
+        <div style="max-height: 500px; overflow-y: auto;">
+          <table class="table table-striped table-bordered" style="border-collapse: collapse; width: 100%;">
+            <thead style="position: sticky; top: 0; background-color: #fff; z-index: 2;">
+            <tr>
+
+    {% for field, field_to_render in fields %}
+
+        <th>
+            <a href="javascript:void(0);"
+               onclick="sortColumnWeekly('{{ field }}', '{{ selected_sort_direction }}')">
+                {{ field_to_render }}
+                {% if selected_sort_field == field %}
+                    {% if selected_sort_direction == 'asc' %}▲{% else %}▼{% endif %}
+                {% endif %}
+            </a>
+        </th>
+    {% endfor %}
+            </tr>
+
+
+                </thead>
+
+            <tbody>
+            {% for row in records %}
+                <tr>
+                    {% for field, field_to_render in fields %}
+                        <td>{{ row|get_item:field }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+        </div>
+    {% endif %}
+{%  endblock %}

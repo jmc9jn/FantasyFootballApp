@@ -1,31 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a479de87-7714-4115-bf5a-eac18cbde942" name="Changes" comment="" />
+    <list default="true" id="a479de87-7714-4115-bf5a-eac18cbde942" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/inspect_tables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/management/commands/create_average_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/management/commands/create_total_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/management/commands/load_weekly_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/static/stats/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/template_tags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/template_tags/custom_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/templates/base_rankings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/templates/player_stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/templates/season_rankings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/templates/weekly_rankings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/templatetags/dict_extras.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/views/player_stats_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stats/views/rankings_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FantasyFootballApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FantasyFootballApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FantasyFootballApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FantasyFootballApp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FantasyFootballApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FantasyFootballApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/passing_stats.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/recieving_stats.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/rushing_stats.xlsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jmc9jn"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jmc9jn/FantasyFootballApp.git",
+    "accountId": "e64a93c4-adb1-4877-99ea-d8caefc235d9"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
   <component name="ProjectId" id="32UWGz6zJCdi4KgugmHJm5dI61V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.FantasyFootballApp.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.create_average_stats.executor": "Run",
+    "Python.inspect_tables.executor": "Run",
+    "Python.load_weekly_stats.executor": "Run",
+    "Python.process_csv.executor": "Run",
+    "Python.test_s3_data.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stats/views" />
+      <recent name="$PROJECT_DIR$/stats/template_tags" />
+      <recent name="$PROJECT_DIR$/stats" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="inspect_tables" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FantasyFootballApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/inspect_tables.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FantasyFootballApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/stats" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/stats/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FantasyFootballApp" type="Python.DjangoServer" factoryName="Django server">
+      <module name="FantasyFootballApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="FantasyFootballApp.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.inspect_tables" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -41,7 +200,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757475539124</updated>
+      <workItem from="1757475540129" duration="278926000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$inspect_tables.coverage" NAME="inspect_tables Coverage Results" MODIFIED="1762145104658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$test_s3_data.coverage" NAME="test_s3_data Coverage Results" MODIFIED="1758603687329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$create_average_stats.coverage" NAME="create_average_stats Coverage Results" MODIFIED="1759900951378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats/management/commands" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$utils.coverage" NAME="utils Coverage Results" MODIFIED="1759121238704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$load_weekly_stats.coverage" NAME="load_weekly_stats Coverage Results" MODIFIED="1759350755273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats/management/commands" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$process_csv.coverage" NAME="process_csv Coverage Results" MODIFIED="1757537984120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
 </project>

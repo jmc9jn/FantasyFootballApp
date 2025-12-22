@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'stats/style.css' %}">
+    <script>
+        function updateFilterWeeklyRankings() {
+            const pos = document.getElementById("position").value;
+            const week = document.getElementById("week").value;
+
+            window.location.href = `?position=${pos}&week=${week}`;
+        }
+
+        function updateFilterSeasonRankings(filter) {
+            const pos = document.getElementById("position").value;
+            const stat_type = document.getElementById("stat_type").value;
+
+            if(filter === 'position'){
+                window.location.href = `?position=${pos}`;
+            }
+            else if (filter === 'stat_type') {
+                window.location.href = `?position=${pos}&stat_type=${stat_type}`;
+            }
+        }
+
+        function updateFilterPlayerStats(filter) {
+            const pos = document.getElementById("position").value;
+            const player = document.getElementById("player").value;
+            const viewType = document.getElementById("viewType").value;
+
+            if(filter === 'position'){
+                window.location.href = `?position=${pos}`;
+            }
+            else if (filter === 'player') {
+                window.location.href = `?position=${pos}&player=${player}`;
+            }
+            else if (filter === 'view') {
+                window.location.href = `?position=${pos}&player=${player}&view=${viewType}`;
+            }
+        }
+
+        function sortColumnWeekly(sort_field, sort_direction) {
+            const pos = document.getElementById("position").value;
+            const week = document.getElementById("week").value;
+
+            // Toggle sort direction
+            let next_direction = (sort_direction === 'desc') ? 'asc' : 'desc';
+
+            // Navigate to URL
+            window.location.href = `?position=${pos}&week=${week}&sort_field=${sort_field}&sort_direction=${next_direction}`;
+        }
+
+
+        function sortColumnSeason(sort_field, sort_direction) {
+            const pos = document.getElementById("position").value;
+            const stat_type = document.getElementById("stat_type").value;
+
+            // Toggle sort direction
+            let next_direction = (sort_direction === 'desc') ? 'asc' : 'desc';
+
+            // Navigate to URL
+            window.location.href = `?position=${pos}&stat_type=${stat_type}&sort_field=${sort_field}&sort_direction=${next_direction}`;
+        }
+
+
+    </script>
+</head>
+
+
+<body>
+    <div class="tabs">
+        <a href="{% url 'home' %}" class="tab {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Weekly Rankings</a>
+        <a href="{% url 'season_rankings' %}" class="tab {% if request.resolver_match.url_name == 'season_rankings' %}active{% endif %}">Season Rankings</a>
+        <a href="{% url 'player_stats' %}" class="tab {% if request.resolver_match.url_name == 'player_stats' %}active{% endif %}">Player Stats</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

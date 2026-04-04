@@ -1,8 +1,41 @@
 # Fantasy Football Application
 
 ## Overview
-End-to-end data engineering and analytics platform that processes NFL weekly stats and generates tables/charts for easy consumption and analysis 
+This application provides an interactive analytics platform for evaluating NFL player performance using weekly and season-level statistics. Users can explore rankings, trends, and individual player performance through a structured multi-tab interface.
+---
 
+## Features
+
+### Weekly Rankings
+The Weekly Rankings tab allows users to analyze player performance on a week-by-week basis.
+
+- Filter by position (QB, RB, WR, TE, Defense)
+- Select NFL week (1–17)
+- View dynamic player rankings for selected filters
+- Rankings based on computed fantasy performance metrics
+
+---
+
+### Season Rankings
+The Season Rankings tab provides aggregated performance across the entire season.
+
+- Filter by position group
+- Toggle between:
+  - Total stats (season-long production)
+  - Average stats (per-game efficiency)
+- Dynamically updated ranked tables
+
+---
+
+### Player Stats Explorer
+The Player Stats tab provides detailed analysis of individual players.
+
+- Filter by position and player
+- View weekly stat breakdowns
+- Interactive tables and trend charts
+- Tracks performance over the full season
+
+---
 ## Architecture
 - Django backend for data storage and APIs
 - AWS S3 for raw and processed data storage

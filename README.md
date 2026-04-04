@@ -61,3 +61,34 @@ The Player Stats tab provides detailed analysis of individual players.
 - Position-based aggregation (QB, RB, WR, TE)
 - Fantasy point ranking system
 - Modular data processing architecture
+
+
+## How to Run the Project
+
+### 1. Clone the Repository
+git clone https://github.com/jmc9jn/FantasyFootballApp.git
+cd FantasyFootballApp
+
+
+### 2. Create Virtual Environment
+python -m venv venv
+source venv/bin/activate
+
+### 3. Install Dependencies
+pip install -r requirements.txt
+
+### 4. Run Migrations
+python manage.py makemigrations basic
+python manage.py migrate
+
+### 5. Load data
+python manage.py load_weekly_stats
+python manage.py create_total_stats
+python manage.py create_cumulative_defense_stats
+python manage.py create_average_stats
+
+### 6. Start Server
+python manage.py runserver
+
+### 7. Run in Browser
+http://127.0.0.1:8000/

@@ -61,8 +61,3 @@ The Player Stats tab provides detailed analysis of individual players.
 - Position-based aggregation (QB, RB, WR, TE)
 - Fantasy point ranking system
 - Modular data processing architecture
-
-## How to Run Django App
-```bash
-pip install -r requirements.txt
-python manage.py runserver

@@ -5,9 +5,9 @@ from django.shortcuts import redirect
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    # Include app URLs under /stats/
-    path('stats/', include('stats.urls')),
+    # Include app URLs under /basic/
+    path('basic/', include('basic.urls')),
 
-    # redirect root '/' to /stats/
-    path('', lambda request: redirect('/stats/')),
+    # redirect root '/' to /basic/
+    path('', lambda request: redirect('/basic/')),
 ]

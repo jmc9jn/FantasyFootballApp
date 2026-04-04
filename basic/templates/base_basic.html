@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'stats/style.css' %}">
+
+    <script>
+        /**
+         * Build query string and redirect.
+         *
+         * Centralizes URL construction so all filters/sorts behave consistently
+         * and avoids duplicating string-building logic across functions.
+         */
+        function navigateWithParams(params) {
+            const query = new URLSearchParams(params).toString();
+            window.location.href = `?${query}`;
+        }
+
+        /**
+         * Update weekly rankings filters (position + week).
+         */
+        function updateFilterWeeklyRankings() {
+            navigateWithParams({
+                position: document.getElementById("position").value,
+                week: document.getElementById("week").value
+            });
+        }
+
+        /**
+         * Update season rankings filters.
+         *
+         * Position change resets stat_type, while stat_type preserves position.
+         */
+        function updateFilterSeasonRankings(filterType) {
+            const position = document.getElementById("position").value;
+            const statType = document.getElementById("stat_type").value;
+
+            const params = { position };
+
+            if (filterType === 'stat_type') {
+                params.stat_type = statType;
+            }
+
+            navigateWithParams(params);
+        }
+
+        /**
+         * Update player stats filters.
+         *
+         * Handles:
+         * - Position selection (resets player list)
+         * - Player selection
+         * - View toggle (table vs chart)
+         */
+        function updateFilterPlayerStats(filterType) {
+            const position = document.getElementById("position").value;
+            const player = document.getElementById("player").value;
+            const view = document.getElementById("viewType").value;
+
+            const params = { position };
+
+            if (filterType === 'player') {
+                params.player = player;
+            } else if (filterType === 'view') {
+                params.player = player;
+                params.view = view;
+            }
+
+            navigateWithParams(params);
+        }
+
+        /**
+         * Generic column sorting handler.
+         *
+         * Avoids duplicating sorting logic across weekly + season tables.
+         */
+        function sortColumn(baseParams, sortField, currentDirection) {
+            const nextDirection = (currentDirection === 'desc') ? 'asc' : 'desc';
+
+            navigateWithParams({
+                ...baseParams,
+                sort_field: sortField,
+                sort_direction: nextDirection
+            });
+        }
+
+        /**
+         * Wrapper for weekly sorting.
+         */
+        function sortColumnWeekly(sortField, sortDirection) {
+            sortColumn(
+                {
+                    position: document.getElementById("position").value,
+                    week: document.getElementById("week").value
+                },
+                sortField,
+                sortDirection
+            );
+        }
+
+        /**
+         * Wrapper for season sorting.
+         */
+        function sortColumnSeason(sortField, sortDirection) {
+            sortColumn(
+                {
+                    position: document.getElementById("position").value,
+                    stat_type: document.getElementById("stat_type").value
+                },
+                sortField,
+                sortDirection
+            );
+        }
+
+        /**
+         * Convert backend field names into readable labels.
+         *
+         */
+        function formatLabel(columnName) {
+            return columnName
+                .replace(/_/g, ' ')
+                .replace(/\b\w/g, char => char.toUpperCase());
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--
+        Navigation tabs across main views.
+
+        Provides consistent navigation between:
+        - Weekly rankings
+        - Season rankings
+        - Player-level analytics
+
+        Active tab is dynamically highlighted using Django's resolver.
+    -->
+    <div class="tabs">
+        <a href="{% url 'home' %}"
+           class="tab {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+            Weekly Rankings
+        </a>
+
+        <a href="{% url 'season_rankings' %}"
+           class="tab {% if request.resolver_match.url_name == 'season_rankings' %}active{% endif %}">
+            Season Rankings
+        </a>
+
+        <a href="{% url 'player_stats' %}"
+           class="tab {% if request.resolver_match.url_name == 'player_stats' %}active{% endif %}">
+            Player Stats
+        </a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

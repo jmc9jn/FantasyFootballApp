@@ -4,32 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a479de87-7714-4115-bf5a-eac18cbde942" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/inspect_tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/management/commands/create_average_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/management/commands/create_total_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/management/commands/load_weekly_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/static/stats/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/template_tags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/template_tags/custom_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/templates/base_rankings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/templates/player_stats.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/templates/season_rankings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/templates/weekly_rankings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/templatetags/dict_extras.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/views/player_stats_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats/views/rankings_view.py" afterDir="false" />
+    <list default="true" id="a479de87-7714-4115-bf5a-eac18cbde942" name="Changes" comment="Updates to scripts and data">
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/rb/create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/te/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/te/create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/utils/data_calls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/utils/useful_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/wr/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advanced/build_data/wr/create.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/management/commands/create_cumulative_defense_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/template_tags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/templates/defense_stats.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/templates/weekly_rankings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/templatetags/dict_extras.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basic/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/FantasyFootballApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FantasyFootballApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FantasyFootballApp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FantasyFootballApp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FantasyFootballApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FantasyFootballApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/passing_stats.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/recieving_stats.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/raw/weekly_stats/week1/rushing_stats.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/inspect_tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/inspect_tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/build_data/qb/create.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/management/commands/create_average_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/management/commands/create_average_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/management/commands/create_cumulative_defense_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/build_data/rb/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/management/commands/create_total_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/management/commands/create_total_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/management/commands/load_weekly_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/management/commands/load_weekly_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/static/stats/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/basic/static/stats/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/template_tags/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/build_data/qb/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/template_tags/custom_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/template_tags/custom_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/templates/base_basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/basic/templates/base_basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/templates/player_stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/basic/templates/player_stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/templates/season_rankings.html" beforeDir="false" afterPath="$PROJECT_DIR$/basic/templates/season_rankings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/templates/weekly_rankings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/templatetags/dict_extras.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic/views/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +64,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmc9jn"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmc9jn&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jmc9jn/FantasyFootballApp.git",
-    "accountId": "e64a93c4-adb1-4877-99ea-d8caefc235d9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:jmc9jn/FantasyFootballApp.git&quot;,
+    &quot;accountId&quot;: &quot;e64a93c4-adb1-4877-99ea-d8caefc235d9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="32UWGz6zJCdi4KgugmHJm5dI61V" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,39 +87,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.FantasyFootballApp.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.create_average_stats.executor": "Run",
-    "Python.inspect_tables.executor": "Run",
-    "Python.load_weekly_stats.executor": "Run",
-    "Python.process_csv.executor": "Run",
-    "Python.test_s3_data.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "main",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.FantasyFootballApp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.create.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.create_average_stats.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inspect_tables.executor&quot;: &quot;Run&quot;,
+    &quot;Python.load_weekly_stats.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_csv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_s3_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/advanced/build_data/utils" />
       <recent name="$PROJECT_DIR$/stats/views" />
       <recent name="$PROJECT_DIR$/stats/template_tags" />
       <recent name="$PROJECT_DIR$/stats" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.create">
+    <configuration name="create" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FantasyFootballApp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/advanced/build_data/qb" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/advanced/build_data/qb/create.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="inspect_tables" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FantasyFootballApp" />
       <option name="ENV_FILES" value="" />
@@ -180,6 +219,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.create" />
         <item itemvalue="Python.utils" />
         <item itemvalue="Python.inspect_tables" />
       </list>
@@ -200,15 +240,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757475539124</updated>
-      <workItem from="1757475540129" duration="278926000" />
+      <workItem from="1757475540129" duration="401813000" />
+      <workItem from="1769483709531" duration="26239000" />
+      <workItem from="1771029578561" duration="27732000" />
     </task>
+    <task id="LOCAL-00001" summary="Updates to scripts and data">
+      <option name="closed" value="true" />
+      <created>1766379937296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766379937297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updates to scripts and data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to scripts and data" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FantasyFootballApp$inspect_tables.coverage" NAME="inspect_tables Coverage Results" MODIFIED="1762145104658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/FantasyFootballApp$create.coverage" NAME="create Coverage Results" MODIFIED="1769565879385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/advanced/build_data/qb" />
     <SUITE FILE_PATH="coverage/FantasyFootballApp$test_s3_data.coverage" NAME="test_s3_data Coverage Results" MODIFIED="1758603687329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/FantasyFootballApp$create_average_stats.coverage" NAME="create_average_stats Coverage Results" MODIFIED="1759900951378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats/management/commands" />
     <SUITE FILE_PATH="coverage/FantasyFootballApp$utils.coverage" NAME="utils Coverage Results" MODIFIED="1759121238704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />

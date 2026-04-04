@@ -64,3 +64,15 @@ th, td {
     width: 100% !important;
     height: 100% !important;
 }
+
+#defense-popup {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-height: 300px;
+    overflow: auto;
+}

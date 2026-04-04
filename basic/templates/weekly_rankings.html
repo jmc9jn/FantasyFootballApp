@@ -1,0 +1,177 @@
+{% extends "base_basic.html" %}
+{% load dict_extras %}
+
+{% block content %}
+
+<h2>Weekly Rankings</h2>
+
+<!-- ========================= -->
+<!-- Filters Section -->
+<!-- ========================= -->
+
+<label for="position">Position:</label>
+<select id="position" onchange="updateFilterWeeklyRankings()">
+    <option value="">Select Position</option>
+    {% for pos in all_positions %}
+        <option value="{{ pos }}" {% if pos == selected_position %}selected{% endif %}>
+            {{ pos }}
+        </option>
+    {% endfor %}
+</select>
+
+<label for="week">Week:</label>
+<select id="week" onchange="updateFilterWeeklyRankings()">
+    {% for week in weeks_list %}
+        <option value="{{ week }}" {% if week == selected_week %}selected{% endif %}>
+            {{ week }}
+        </option>
+    {% endfor %}
+</select>
+
+<!-- ========================= -->
+<!-- Rankings Table -->
+<!-- ========================= -->
+
+{% if records %}
+    <h3>{{ selected_position }} Rankings for Week {{ selected_week }}</h3>
+
+    <!--
+        Scrollable table with sticky header.
+    -->
+    <div style="max-height: 500px; overflow-y: auto;">
+
+        <table class="table table-striped table-bordered"
+               style="border-collapse: collapse; width: 100%;">
+
+            <!-- Table Header -->
+            <thead style="position: sticky; top: 0; background-color: #fff; z-index: 2;">
+                <tr>
+                    {% for field, display_name in fields %}
+                        <th>
+                            <!--
+                                Sortable column header.
+                            -->
+                            <a href="javascript:void(0);"
+                               onclick="sortColumnWeekly('{{ field }}', '{{ selected_sort_direction }}')">
+                                {{ display_name }}
+                            </a>
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <!-- Table Body -->
+            <tbody>
+                {% for row in records %}
+                    <tr>
+                        {% for field, _ in fields %}
+
+                            {% if field == "opp" %}
+                                <!--
+                                    Opponent cell with hover interaction.
+                                    Allows users to view defensive matchup stats
+                                    without leaving the rankings page.
+                                -->
+                                <td>
+                                    <span class="defense-cell"
+                                          data-opp="{{ row|get_item:field }}">
+                                        {{ row|get_item:field }}
+                                    </span>
+                                </td>
+                            {% else %}
+                                <td>{{ row|get_item:field }}</td>
+                            {% endif %}
+
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+{% endif %}
+
+<!-- Popup container for defense stats -->
+<div id="defense-popup"></div>
+
+<script>
+/**
+ * Hover-based defense stats popup.
+ * Provides contextual matchup insights (defense vs position)
+ */
+
+const popup = document.getElementById("defense-popup");
+
+let hoveringCell = false;
+let hoveringPopup = false;
+
+/**
+ * Fetch and display defense stats for hovered opponent.
+ */
+async function showDefensePopup(cell) {
+    const opponent = cell.dataset.opp;
+    const position = document.getElementById("position").value || "QB";
+
+    // Position popup relative to hovered cell
+    const rect = cell.getBoundingClientRect();
+    popup.style.top = (rect.bottom + window.scrollY) + "px";
+    popup.style.left = (rect.left + window.scrollX) + "px";
+    popup.style.display = "block";
+
+    popup.innerHTML = "Loading...";
+
+    try {
+        const response = await fetch(
+            `defense-weekly/?team=${encodeURIComponent(opponent)}&position=${encodeURIComponent(position)}`
+        );
+
+        const html = await response.text();
+        popup.innerHTML = html;
+
+    } catch (error) {
+        popup.innerHTML = "Failed to load data";
+        console.error("Popup fetch error:", error);
+    }
+}
+
+/**
+ * Attach hover listeners to opponent cells.
+ *
+ * Uses small delay to prevent flickering when moving between
+ * cell and popup.
+ */
+document.querySelectorAll(".defense-cell").forEach(cell => {
+
+    cell.addEventListener("mouseenter", async () => {
+        hoveringCell = true;
+        await showDefensePopup(cell);
+    });
+
+    cell.addEventListener("mouseleave", () => {
+        hoveringCell = false;
+
+        setTimeout(() => {
+            if (!hoveringCell && !hoveringPopup) {
+                popup.style.display = "none";
+            }
+        }, 150);
+    });
+});
+
+/**
+ * Keep popup visible while user interacts with it.
+ */
+popup.addEventListener("mouseenter", () => {
+    hoveringPopup = true;
+});
+
+popup.addEventListener("mouseleave", () => {
+    hoveringPopup = false;
+
+    if (!hoveringCell) {
+        popup.style.display = "none";
+    }
+});
+</script>
+
+{% endblock %}

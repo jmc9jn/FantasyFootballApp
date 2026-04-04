@@ -1,0 +1,36 @@
+{% load dict_extras %}
+
+<!--
+    Dynamic stats table.
+    - `columns`: raw field names used to access dictionary values (backend keys)
+    - `columns_to_show`: cleaned, user-friendly column labels for display
+-->
+
+<table class="table table-sm table-bordered">
+
+    <!-- Table Header -->
+    <thead>
+        <tr>
+            {% for col in columns_to_show %}
+                <!-- Display formatted column names -->
+                <th>{{ col|capfirst }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+        {% for row in records %}
+            <tr>
+                {% for col in columns %}
+                    <!--
+                        Access dictionary value using custom template filter.
+
+                    -->
+                    <td>{{ row|get_item:col }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+
+</table>

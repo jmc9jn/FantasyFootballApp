@@ -88,7 +88,7 @@ The Player Stats tab provides detailed analysis of individual players.
 - python manage.py create_average_stats
 
 ### 6. Start Server
-python manage.py runserver
+- python manage.py runserver
 
 ### 7. Run in Browser
-http://127.0.0.1:8000/
+- http://127.0.0.1:8000/

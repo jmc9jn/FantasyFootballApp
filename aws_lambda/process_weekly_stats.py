@@ -95,7 +95,7 @@ def lambda_handler(event, context):
     snaps = read_excel_from_s3("snap_stats.xlsx", prefix)
 
     # -----------------------------
-    # PROCESS DATA (your existing logic)
+    # PROCESS DATA
     # -----------------------------
     qb = create_qb_weekly_stats(passing, air_yards, accuracy, pressure, rushing, adv_rushing, fumbles, snaps)
     rb = create_rb_weekly_stats(rushing, receiving, adv_rushing, adv_receiving, fumbles, snaps)

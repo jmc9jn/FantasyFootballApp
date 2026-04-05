@@ -54,7 +54,7 @@ The Player Stats tab provides detailed analysis of individual players.
 - Django
 - AWS (S3, Lambda)
 - Pandas
-- PostgreSQL / SQLite
+- SQLite
 
 ## Key Features
 - Automated ETL pipeline for NFL stats
